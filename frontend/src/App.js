@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/layout/Header';
-import Home from './components/pages/Home';
+import Header from './components/layout/Header/Header';
+import * as HomeModule from './pages/Home/Home';
+
 import './App.css';
+const Home = HomeModule.default || HomeModule;
+
 
 function App() {
   return (
@@ -20,9 +23,7 @@ function App() {
           </Routes>
         </main>
         <footer className="footer">
-          <div className="container">
-            <p>&copy; {new Date().getFullYear()} Jewelry Management System. All rights reserved.</p>
-          </div>
+
         </footer>
       </div>
     </Router>

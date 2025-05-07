@@ -1,24 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="container">
-        <div className="logo">
-          <Link to="/">Jewelry Management</Link>
+      <nav className="navbar navbar-expand-lg">
+        <div className="container">
+          <Link className="navbar-brand" to="/">Jewelry Management System</Link>
+          <button 
+            className="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/materials">Materials</Link>
+              </li>
+              {/* Add more nav items as needed */}
+            </ul>
+          </div>
         </div>
-        <nav className="nav">
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/materials">Materials</Link></li>
-            <li><Link to="/designs">Designs</Link></li>
-            <li><Link to="/inventory">Inventory</Link></li>
-            <li><Link to="/orders">Orders</Link></li>
-          </ul>
-        </nav>
-      </div>
+      </nav>
     </header>
   );
 };

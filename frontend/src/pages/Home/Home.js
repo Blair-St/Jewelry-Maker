@@ -1,58 +1,50 @@
 import React from 'react';
-import './Home.css';
 
 const Home = () => {
   return (
-    <div className="home">
-      <section className="hero">
-        <div className="container">
-          <h1>Jewelry Management System</h1>
-          <p>Organize your materials, designs, inventory, and orders in one place.</p>
-          <div className="cta-buttons">
-            <button className="btn btn-primary">Get Started</button>
-            <button className="btn btn-secondary">Learn More</button>
-          </div>
-        </div>
-      </section>
-
-      <section className="features">
-        <div className="container">
-          <h2>Features</h2>
-          <div className="feature-grid">
-            <div className="feature-card">
-              <div className="feature-icon">📦</div>
-              <h3>Materials Management</h3>
-              <p>Keep track of all your craft materials, gemstones, metals, and findings.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🎨</div>
-              <h3>Design Catalog</h3>
-              <p>Document your jewelry designs with images, materials, and production notes.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">📊</div>
-              <h3>Inventory Tracking</h3>
-              <p>Manage your finished pieces and know exactly what you have available.</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">📋</div>
-              <h3>Order Management</h3>
-              <p>Process customer orders from start to finish in one system.</p>
+    <div className="home-container">
+      <div className="jumbotron">
+        <h1 className="display-4">Welcome to Jewelry Management System</h1>
+        <p className="lead">
+          A comprehensive platform to manage your jewelry materials, designs, and inventory.
+        </p>
+        <hr className="my-4" />
+        <p>
+          Get started by exploring your materials inventory or creating new designs.
+        </p>
+      </div>
+      
+      <div className="row mt-4">
+        <div className="col-md-4">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Materials</h5>
+              <p className="card-text">Manage your materials inventory, including gems, metals, and other supplies.</p>
+              <a href="/materials" className="btn btn-primary">View Materials</a>
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="about">
-        <div className="container">
-          <h2>About Jewelry Management</h2>
-          <p>
-            Built specifically for jewelry makers, this system helps you organize your creative
-            process from raw materials to finished pieces. Track your inventory, manage custom
-            orders, and keep your jewelry business running smoothly.
-          </p>
+        
+        <div className="col-md-4">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Designs</h5>
+              <p className="card-text">Browse, create, and modify your jewelry designs.</p>
+              <a href="/designs" className="btn btn-primary">View Designs</a>
+            </div>
+          </div>
         </div>
-      </section>
+        
+        <div className="col-md-4">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Inventory</h5>
+              <p className="card-text">Track your finished pieces and manage your jewelry inventory.</p>
+              <a href="/inventory" className="btn btn-primary">View Inventory</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
