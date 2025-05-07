@@ -1,34 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { GiHeartNecklace } from "react-icons/gi";
+import { FiLogIn } from "react-icons/fi";
+import { NavLink } from 'react-router-dom';
+import './Header.css';
 
 const Header = () => {
   return (
-    <header className="header">
-      <nav className="navbar navbar-expand-lg">
-        <div className="container">
-          <Link className="navbar-brand" to="/">Jewelry Management System</Link>
-          <button 
-            className="navbar-toggler" 
-            type="button" 
-            data-bs-toggle="collapse" 
-            data-bs-target="#navbarNav"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/materials">Materials</Link>
-              </li>
-              {/* Add more nav items as needed */}
-            </ul>
-          </div>
+    <nav>
+      <div className='div-header'>
+        <div style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
+          <NavLink to='/'><GiHeartNecklace className='div-svg'/></NavLink>
+          <div className='div-title'>
+        <NavLink to='/' style={{textDecoration:'none'}}><h1>Jewelry Manager</h1></NavLink>
         </div>
-      </nav>
-    </header>
+        </div>
+        
+        <div style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
+          <div className='div-title'>
+            <NavLink to='/mymaterials' style={{textDecoration:'none'}}><h2>My Materials</h2></NavLink>
+          </div>
+          <div className='div-title'>
+            <NavLink to='/myprojects' style={{textDecoration:'none'}}><h2>My Projects</h2></NavLink>
+          </div>
+            <div className='div-title'>
+              <NavLink to='/myproducts' style={{textDecoration:'none'}}><h2>My Products</h2></NavLink>
+            </div>
+            
+          <NavLink to='/signin'><FiLogIn className='div-svg'/></NavLink>
+        </div>
+      </div>
+    </nav>
   );
 };
 
